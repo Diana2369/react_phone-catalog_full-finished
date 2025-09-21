@@ -1,13 +1,43 @@
-body {
+@import './assets/fonts/variables';
+
+
+* {
+  cursor: url('/src/assets/icons/cursor.svg') 8 8, auto;
+
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+
+  font-family: $font-main;
+  color: var(--color-white);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100%;
+  background-color:var(--color-black);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme {
+  color: var(--color-white);
+  background-color: var(--color-surface1);
+}
+
+main {
+  margin-top: 64px;
+}
+
+
+@media (max-width: 1199px) and (min-width: 640px) {
+  main {
+  margin-top: 48px;
+}
+}
+
+
+// Мобильная от 320px до 639px
+@media (max-width: 639px) {
+  main {
+  margin-top: 48px;
+}
 }
